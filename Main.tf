@@ -16,4 +16,13 @@ resource "aws_instance" "example_instance_2" {
     Environment = var.environment
   }
 }
+resource "aws_instance" "example_instance_3" {
+  ami           = var.ami
+  instance_type = var.instance_type
+
+  tags = {
+    Name        = "My third instance"
+    Environment = var.environment
+  }
+}
 
