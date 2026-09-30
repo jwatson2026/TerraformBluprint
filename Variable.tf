@@ -7,7 +7,7 @@ variable "environment" {
 variable "ami" {
   description = "The AMI ID for the EC2 instances"
   type        = string
-  default     = "ami-0c55b159cbfafe1f0"
+  default     = "ami-0b6d9d3d33ba97d99"
 }
 
 variable "instance_type" {
