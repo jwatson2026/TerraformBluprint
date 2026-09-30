@@ -1,21 +1,19 @@
-resource "aws_s3_bucket" "example" {
-  bucket = "new-class-bucket2026"
+resource "aws_instance" "example_instance" {
+  ami           = var.ami
+  instance_type = var.instance_type
 
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+    Name        = "My recent instance"
+    Environment = var.environment
   }
 }
+resource "aws_instance" "example_instance_2" {
+  ami           = var.ami
+  instance_type = var.instance_type
 
-resource "aws_s3_bucket" "examplebucket2" {
-  bucket = "my-tf-better-bucket"
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+    Name        = "My second instance"
+    Environment = var.environment
   }
 }
-resource "aws_s3_bucket" "lb_logs" {
-  bucket = "joshua-test-lb-logs-2026"
-}
-
 
